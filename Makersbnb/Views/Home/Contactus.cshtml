@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Email Contacts";
+}
+
+<h1>Space owners email contacts</h1>
+
+    <ul>
+        @{
+            foreach(string email in ViewBag.Email)
+            {
+                <li>@email</li>
+            }
+        }
+    </ul>

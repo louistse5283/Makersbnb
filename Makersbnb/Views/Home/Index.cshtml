@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var festiveMessages = new Dictionary<string, string>
+    {
+        { "02-14", "Happy Valentine's Day!" },
+        { "12-25", "Merry Christmas! Ho~Ho~Ho" },
+        { "12-31", "Happy New Year's Even!" },
+        { "02-03", "Happy National Carrot Cake Day you rabbit." },
+    };
+
+    var today = DateTime.Now.ToString("MM-dd");
+    festiveMessages.TryGetValue(today, out var festiveMessage);
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <h2>Welcome to Makersbnb!</h2>
+    <p>We hope you enjoy your stay. Here are some reviews from our happy guests:</p>
+
+    <ul>
+        <li>"Fantastic place to stay!a Jacob was very accommodating." - Jane</li>
+        <li>"Great host with a fantastic property." - Richard</li>
+        <li>"Had a lovely time at London" - Paul</li>
+    </ul>
+
+    @if (!string.IsNullOrEmpty(festiveMessage))
+    {
+        <h3>@festiveMessage</h3>
+    }
+</div>

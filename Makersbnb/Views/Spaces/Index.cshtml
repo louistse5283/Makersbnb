@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Our Spaces";
+
+    var space = ViewBag.Space1;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p>Places for you to stay!</p>
+</div>
+<div>
+    <h2>@space.Name</h2>
+    <p>@space.Description</p>
+    <p>Price: @space.Price per night</p>
+    <p>Number of Bedrooms: @space.Bedrooms</p>
+</div>
