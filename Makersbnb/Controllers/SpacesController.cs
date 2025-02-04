@@ -28,7 +28,7 @@ public class SpacesController : Controller
     [HttpPost]
     public IActionResult Create(Space space)
     {
-        MakersbnbDBContext dbContext = new MakersbnbDBContext();
+        MakersbnbDbContext dbContext = new MakersbnbDbContext();
         dbContext.Spaces.Add(space);
         dbContext.SaveChanges();
 
