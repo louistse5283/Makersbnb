@@ -14,7 +14,7 @@ public class SpacesController : Controller
 
     public IActionResult Index() // Handling `Get "/Spaces"`
     {
-        ViewBag.Space1 = new Space("Cozy Apartment", "A place near London Waterloo", 100, 3);
+        ViewBag.Space1 = new Space("Cozy Apartment", "A place near London Waterloo", 100, 3, "No smoking and pets allowed.");
         
         return View();
     }
